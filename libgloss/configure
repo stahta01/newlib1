@@ -277,6 +277,7 @@ ac_subdirs_all="$ac_subdirs_all libnosys"
 ac_subdirs_all="$ac_subdirs_all i386"
 ac_subdirs_all="$ac_subdirs_all m32r"
 ac_subdirs_all="$ac_subdirs_all m68hc11"
+ac_subdirs_all="$ac_subdirs_all m6809"
 ac_subdirs_all="$ac_subdirs_all m68k"
 ac_subdirs_all="$ac_subdirs_all pa"
 ac_subdirs_all="$ac_subdirs_all i960"
@@ -1847,6 +1848,13 @@ subdirs="$subdirs m32r"
 subdirs="$subdirs m68hc11"
 
 	config_testsuite=true
+	;;
+  m6809-*-*)
+
+
+subdirs="$subdirs m6809"
+
+	config_testsuite=false
 	;;
   fido-*-* | m68*-*-*)
 
