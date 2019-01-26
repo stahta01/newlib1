@@ -42,12 +42,17 @@
 #define _POINTER_INT short
 #endif
 
-#if defined(__mc68hc11__) || defined(__mc68hc12__) || defined(__mc68hc1x__)
+#if defined(__m6809__) || defined(__mc68hc11__) || defined(__mc68hc12__) || defined(__mc68hc1x__)
 #undef INT_MAX
 #undef UINT_MAX
 #define INT_MAX __INT_MAX__
 #define UINT_MAX (__INT_MAX__ * 2U + 1)
 #define _POINTER_INT short
+#endif
+#if defined(__m6809__)
+/*#define _REENT_SMALL  <- code is bigger */
+#define __SINGLE_THREAD__
+#define __SMALL_BITFIELDS
 #endif
 
 #ifdef ___AM29K__
