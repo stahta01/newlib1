@@ -319,7 +319,7 @@ case $basic_machine in
 	c6x)
 		basic_machine=tic6x-unknown
 		;;
-	m6811 | m68hc11 | m6812 | m68hc12 | picochip)
+	m6809 | m6811 | m68hc11 | m6812 | m68hc12 | picochip)
 		# Motorola 68HC11/12.
 		basic_machine=$basic_machine-unknown
 		os=-none
@@ -376,6 +376,7 @@ case $basic_machine in
 	| le32-* | le64-* \
 	| lm32-* \
 	| m32c-* | m32r-* | m32rle-* \
+	| m6809-* \
 	| m68000-* | m680[012346]0-* | m68360-* | m683?2-* | m68k-* \
 	| m88110-* | m88k-* | maxq-* | mcore-* | metag-* | microblaze-* \
 	| mips-* | mipsbe-* | mipseb-* | mipsel-* | mipsle-* \
@@ -532,6 +533,10 @@ case $basic_machine in
 	cegcc)
 		basic_machine=arm-unknown
 		os=-cegcc
+		;;
+	coco)
+		basic_machine=coco
+		os=-none
 		;;
 	convex-c1)
 		basic_machine=c1-convex
