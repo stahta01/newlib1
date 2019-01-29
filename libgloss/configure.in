@@ -52,6 +52,9 @@ case "${target}" in
   i960-*-coff)
 	AC_CONFIG_SUBDIRS([i960])
 	;;
+  sparc-*leon*-elf* | sparc-*leon*-none*)
+	AC_CONFIG_SUBDIRS([sparc_leon])
+	;; 
   sparclet-*-aout* | sparc-*-elf* | sparc64-*-elf* | sparc86x-*-* | sparclite-*-*)
 	AC_CONFIG_SUBDIRS([sparc])
 	;;
@@ -121,10 +124,13 @@ case "${target}" in
   m32c-*-*)
 	AC_CONFIG_SUBDIRS([m32c])
 	;;
+  rl78*-*-elf)
+	AC_CONFIG_SUBDIRS([rl78])
+	;;
   rx*-*-elf)
 	AC_CONFIG_SUBDIRS([rx])
 	;;
-  strongarm-*-elf | strongarm-*-coff | arm*-*-elf | arm*-*-coff | ep9312-*-elf | ep9312-*-coff | xscale-*-elf | xscale-*-coff | *arm-*-*)
+  arm*-*-elf | arm*-*-coff | arm-*-*)
 	AC_CONFIG_SUBDIRS([arm])
 	;;
   spu-*-elf)
