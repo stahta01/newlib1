@@ -67,7 +67,7 @@ am__installdirs = "$(DESTDIR)$(toollibdir)" "$(DESTDIR)$(toollibdir)" \
 	"$(DESTDIR)$(toollibdir)"
 toollibLIBRARIES_INSTALL = $(INSTALL_DATA)
 LIBRARIES = $(toollib_LIBRARIES)
-ARFLAGS = cru
+ARFLAGS = -r
 libc_a_AR = $(AR) $(ARFLAGS)
 libc_a_LIBADD =
 libc_a_SOURCES = libc.c
@@ -332,7 +332,7 @@ SUBDIRS = libc libm \
 
 tooldir = $(exec_prefix)/$(host_alias)
 toollibdir = $(tooldir)/lib$(MULTISUBDIR)
-AR_FLAGS = rc
+AR_FLAGS = -r
 @USE_LIBTOOL_TRUE@toollib_LTLIBRARIES = libm.la \
 @USE_LIBTOOL_TRUE@	libc.la
 

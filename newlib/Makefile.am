@@ -71,7 +71,7 @@ SUBDIRS = libc libm \
 tooldir = $(exec_prefix)/$(host_alias)
 toollibdir = $(tooldir)/lib$(MULTISUBDIR)
 
-AR_FLAGS = rc
+AR_FLAGS = -r
 
 if USE_LIBTOOL
 toollib_LTLIBRARIES = libm.la \
